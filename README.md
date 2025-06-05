@@ -73,7 +73,9 @@ Licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 ### 🌐 Japanese Version
 
- [日本語版はこちら（README_jp.md）]
+→ [日本語版はこちら（README_jp.md）](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README_jp.md)
+
+ 
 ---
 
 ### 🤝 Acknowledgements
