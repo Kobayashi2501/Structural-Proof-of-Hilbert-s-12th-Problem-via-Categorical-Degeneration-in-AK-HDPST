@@ -77,6 +77,6 @@
 
 ---
 
-### 🌐 英語版
+### 🌐 英語版 English Version
 
-→ [English version available here](https://github.com/Kobayashi2501/Hilbert12-StructuralProof)
+→ [English version (README.md)](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README.md)
