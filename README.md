@@ -73,8 +73,7 @@ Licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 ### 🌐 Japanese Version
 
-→ [日本語版はこちら / Japanese Version Repository](https://github.com/Kobayashi2501/Hilbert12-StructuralProof-JP)
-
+ [日本語版はこちら（README_jp.md）]
 ---
 
 ### 🤝 Acknowledgements
