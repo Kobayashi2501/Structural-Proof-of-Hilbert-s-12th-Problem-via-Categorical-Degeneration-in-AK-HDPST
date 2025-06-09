@@ -374,7 +374,7 @@ The embedding preserves local neighborhoods and global geodesics under mild samp
 
 ---
 
-\subsection*{B⁺.3 Stability of Persistent Homology}
+\subsection*{B.3 Stability of PH₁ under Isomap Embedding}
 
 \begin{theorem}[Bottleneck Stability of PH]
 Let \( X, Y \) be metric spaces with Gromov–Hausdorff distance \( d_{GH}(X, Y) < \varepsilon \).  
@@ -384,10 +384,21 @@ d_B(\mathrm{PH}_1(X), \mathrm{PH}_1(Y)) < C \varepsilon.
 \]
 \end{theorem}
 
+\begin{lemma}[PH₁ Stability under Navier–Stokes Flow]
+Let \( u(t) \in H^1(\mathbb{R}^3) \) evolve under the Navier–Stokes dynamics and let \( X_t \subset \mathbb{R}^N \) be the Isomap embedding of orbit snapshots.  
+Then the persistent homology group \( \mathrm{PH}_1(X_t) \) is stable under perturbations in the \( H^1 \)-norm.
+
+\textbf{Sketch.}  
+From the Cohen–Steiner et al. stability theorem, the bottleneck distance between persistent diagrams is bounded by the \( L^\infty \)-norm of function perturbations.  
+Since \( H^1 \hookrightarrow C^\alpha \) under Sobolev embedding, and the flow is \( H^1 \)-continuous, it follows that the barcode structure remains stable under Isomap projection.
+\qed
+\end{lemma}
+
 \begin{corollary}
 If the original data cloud \( X = E(\mathbb{Q}) \subset \mathbb{R}^d \) yields \( \mathrm{PH}_1(X) = 0 \),  
 then any perturbation \( Y \) within metric error \( \varepsilon \) retains trivial persistent topology.
 \end{corollary}
+
 
 ---
 
@@ -888,22 +899,30 @@ Thus, \( \mathbb{H}^1(\mathcal{H}om^\bullet(\mathcal{F}_E^\bullet, \mathbb{Q}_\e
 
 ---
 
-\subsection*{G.3 Theorem G.1 (Ext Vanishing Implies Motivic Triviality)}
+\subsection*{G.3 Theorem G.1 (Topological–Categorical Collapse and Motivic Triviality)}
 
 \begin{theorem}
-If \( \mathrm{Ext}^1(\mathcal{F}_E^\bullet, \mathbb{Q}_\ell) = 0 \), then the motive \( \mathcal{F}_E^\bullet \) is equivalent, in the derived category,  
-to a trivial extension:
+Let \( X \subset \mathbb{R}^N \) be the Isomap embedding of a filtered orbit space \( E(\mathbb{Q}) \), with persistent homology \( \mathrm{PH}_1(X) \).  
+If \( \mathrm{PH}_1(X) = 0 \), then under the AK-HDPST functorial collapse principle:
 \[
-\mathcal{F}_E^\bullet \simeq H^0(\mathcal{F}_E^\bullet) \in D^b(\mathsf{Mot}),
+\mathrm{Ext}^1(\mathcal{F}_E^\bullet, \mathbb{Q}_\ell) = 0.
 \]
-and carries no hidden higher extension data.
+Moreover, the motive \( \mathcal{F}_E^\bullet \in D^b(\mathsf{Mot}) \) becomes derived-trivial:
+\[
+\mathcal{F}_E^\bullet \simeq H^0(\mathcal{F}_E^\bullet),
+\]
+and carries no higher obstruction data.
 \end{theorem}
 
 \begin{proof}[Sketch]
-By Lemma G.1, Ext vanishing implies no nontrivial derived extensions between the objects.  
-Hence, the motive behaves semisimply in the derived sense,  
-and categorical obstructions to rationality collapse.
+By the AK collapse framework, the vanishing of \( \mathrm{PH}_1(X) \) implies topological contractibility of the orbit space in degree 1, which under the persistence–Ext functor induces:
+\[
+\mathrm{Ext}^1(\mathcal{F}_E^\bullet, \mathbb{Q}_\ell) = 0.
+\]
+By Lemma G.1, this implies that all higher extension classes vanish, and the motive becomes semisimple in the derived category.
+\qed
 \end{proof}
+
 
 ---
 
