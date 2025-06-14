@@ -1,82 +1,118 @@
-# 🌐 ヒルベルト第12問題の構造的証明  
-## AK-HDPSTにおける圏論的退化を通じて
+# 🔷 ヒルベルト第12問題の構造的・形式的解法 (v2.0)
 
-このリポジトリは、**AK高次元射影構造理論（AK-HDPST）** に基づいて構築された、  
-**ヒルベルト第12問題の構造的かつ圏論的な解法**を提示します。
-
----
-
-### 📌 概要
-
-ヒルベルト第12問題は、与えられた数体 \( K \) の**最大アーベル拡大 \( K^{\text{ab}} \)** を、  
-**特殊関数を用いて明示的に構成すること**を求める問題です。  
-
-虚二次体に対してはモジュラー関数を用いた解法が既に知られていますが、  
-**実二次体に対する一般的な構成法は未解決**のままでした。
-
-> 本研究は、トポロジー・導来圏・退化構造を用いることで、  
-> 虚・実いずれの二次体に対しても **圏論的・構成論的な解法** を提供します。
+📄 [English README (英語版はこちら)](README.md)  
+📦 ベース理論： [AK高次元射影構造理論 v8.1](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
 ---
 
-### 📄 含まれるファイル
+## ✨ 概要
 
-- `Structural Proof of Hilbert's 12th Problem via Categorical Degeneration in AK-HDPST.tex`  
-- `Structural Proof of Hilbert's 12th Problem via Categorical Degeneration in AK-HDPST.pdf`  
-- 付録：Ext\(^1\) の崩壊例、持続的ホモロジー（PH）の図式、AK–tropical関数の候補
+本リポジトリは、**AK高次元射影構造理論（AK-HDPST）**を応用し、  
+**ヒルベルトの第12問題**を「構造的かつ形式的」に解決する枠組みを提示します。  
+特別関数を外部構成せず、Persistent Homology（PH）と Extクラスの消滅（collapse）により  
+数論的拡大を「内部的に生成」します。
 
----
-
-### ✅ 主な成果
-
-- ✅ **虚二次体の場合**：  
-  AK-sheaf 系列のコリミット構成により、\( \mathbb{Q}(\sqrt{-d})^{\text{ab}} \) を再構成
-
-- ✅ **実二次体の場合**：  
-  明示的な特殊関数なしで、Ext 群の崩壊がアーベル化構造を内部的に実現
-
-- ✅ **特殊関数は構造内部で実現**：  
-  AK–tropical関数 \( \theta_n^{\text{trop}} \) によって、モジュラー関数の構造的代替が可能
+> \[
+\mathrm{PH}_1 = 0 \quad \Leftrightarrow \quad \mathrm{Ext}^1 = 0 \quad \Rightarrow \quad f_K(\infty) \in K^{\mathrm{ab}}
+\]
 
 ---
 
-### 🔍 証明の流れ
+## 📌 主な貢献
 
-1. \( \mathbb{Q}(\sqrt{\pm d}) \) の単数から AK-sheaf を構成  
-2. PH（持続的ホモロジー）により退化を追跡（\( \mathrm{PH}_1 \to 0 \)）  
-3. Ext 群の消滅（\( \mathrm{Ext}^1(F_t, -) \to 0 \)）を導来圏で確認  
-4. コリミット \( F_\infty \cong K^{\text{ab}} \) を導出
-
----
-
-### 📎 関連プロジェクト
-
-> 📘 参照：  
-[AK高次元射影構造理論（AK-HDPST）](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+- **特別関数生成を内部的に実現**（AK-sheafの崩壊構造のみで生成）  
+- **型理論への埋め込み可能性**（Coq / Lean のΠ/Σ型構文対応）  
+- **単位群の射影とバーコード収束**によるトポロジー的崩壊  
+- **Ext$^1$ の導来圏的消滅**による合成可能性の復元  
+- **トロピカル収束による関数構成の視覚化**  
+- \( \mathbb{Q}(\sqrt{13}) \) 等の実数体における数値検証も収録
 
 ---
 
-## 👤 著者情報
+## 🌐 AK Collapseによるヒルベルト12構造
 
-**著者**：小林 敦  
-**理論協力**：ChatGPT Research Partner  
-📧 **連絡先**：[dollops2501@icloud.com](mailto:dollops2501@icloud.com)
-
----
-
-### 🚀 arXiv 投稿予定
-
-本成果は現在、**arXiv 投稿準備中**です。  
-理論検証や査読協力に関心のある研究者・機関の方は、ぜひご連絡ください。
-
----
-
-### 📜 ライセンス
-
-本リポジトリは [MITライセンス](https://opensource.org/licenses/MIT) のもと公開されています。
+| ステップ | 構造的記述 |
+|----------|------------|
+| 1 | 単位元対数からAK-sheaf \( \mathcal{F}_n \) を構築 |
+| 2 | Persistent Homology：\( \mathrm{PH}_1(\mathcal{F}_n) \to 0 \) を確認 |
+| 3 | 派生トーサークラス消滅：\( \mathrm{Ext}^1(\mathcal{F}_n, -) \to 0 \) |
+| 4 | 崩壊極限：\( \mathcal{F}_\infty \Rightarrow f_K(\infty) \in K^{\mathrm{ab}} \) |
+| 5 | 特別関数は内部圏的に生成される（関数名なしでも機能表現） |
+| 6 | トロピカル極限で \( \theta_\infty \) の性質を記述可能 |
+| 7 | Coq / Lean 型理論との整合（Z.12, Final.2 にて実装）
 
 ---
 
-### 🌐 英語版 English Version
+## 🧩 補論（Appendix）構成一覧
 
-→ [English version (README.md)](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README.md)
+| 補論 | 内容 |
+|------|------|
+| A | AK-sheafの退化構造、PH₁とExtの崩壊対応 |
+| B | バーコード極限挙動と派生圏フィルタ構造 |
+| C | トロピカル関数の内部表現と漸近収束 |
+| D | Coq/Leanにおける型理論的符号化（Π/Σ型、関手図式） |
+| E | 従来のKronecker–Weber理論・モジュラー関数との比較 |
+| F | 実数体 \( \mathbb{Q}(\sqrt{13}) \) によるPH・Ext検証 |
+| Z | Collapse公理群 A0〜A8：完全性、構造安定性、ZFC互換論理
+
+---
+
+## 🔍 従来手法との比較
+
+| 項目 | 従来手法 | AK Collapse |
+|------|----------|-------------|
+| 特別関数 | モジュラー/楕円関数 | 崩壊構造内に内包 |
+| 論理基盤 | 解析的/超越的 | 導来圏＋型理論 |
+| 自動化可能性 | 非形式的（手計算） | Coq/Leanによる形式検証可能 |
+| 一般化可能性 | 虚二次体のみ | 実数体含む広範な数体へ対応可能 |
+
+---
+
+## 📁 含まれるファイル一覧
+
+| ファイル | 内容 |
+|----------|------|
+| `Structural and Formal Resolution of Hilbert's 12th Problem_v2.0.tex` | 本文LaTeX |
+| `Structural and Formal Resolution of Hilbert's 12th Problem_v2.0.pdf` | 完成済みPDF版 |
+| `README.md` | 英語版README |
+| `README_jp.md` | この日本語README |
+
+---
+
+## 📄 Collapse 公理群（Appendix Z）
+
+- **A0–A8**：PH・Ext・関数生成・型理論の整合性を示すCollapse公理
+- **Z.12**：Π型・Σ型によるCoq/Lean符号化（形式証明のための基盤）
+- **Final.1–3**：Collapse完全性、関手的安定性、関数生成帰結の保証
+
+---
+
+## 💡 推奨知識
+
+- Persistent Homology の基礎
+- 派生圏・Ext群（Derived Category / Sheaf Theory）
+- トロピカル幾何と関数極限
+- 数体の類体論的構造
+- 任意（補論D・Z.12）：Coq や Lean などの型理論系証明環境の利用経験
+
+---
+
+## 📤 arXiv投稿準備済
+
+本構成は arXiv 提出に最適化されており、以下のカテゴリを想定：
+
+- **math.AG**, **math.NT**, **math.CT**
+
+エンドース協力、査読前レビュー、共同研究の申し出歓迎です。
+
+---
+
+## ✍️ 著者情報
+
+**小林 敦志（A. Kobayashi）**  
+_ChatGPT Research Partnerとの共著構成_  
+📧 dollops2501@icloud.com
+
+---
+
+> *「崩壊とは破壊ではなく、数理構造の内部生成である。」*
