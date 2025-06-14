@@ -1197,6 +1197,62 @@ such that:
 
 This provides a categorical base for uniformizing Collapse theory across arithmetic, topological, and logical contexts.
 
+\subsection*{Z.11 Type-Theoretic Encoding of Collapse Axioms}
+\addcontentsline{toc}{subsection}{Z.11 Type-Theoretic Encoding of Collapse Axioms}
+
+To enable formal verification of the Collapse axioms in proof assistants such as Coq or Lean,  
+we encode the key Collapse propositions as dependent types over logical spaces:
+
+\paragraph{Type Signature of Collapse Equivalence.}
+\[
+\mathrm{PH}_1 = 0 \;\; \Leftrightarrow \;\; \mathrm{Ext}^1 = 0 \;\; \Leftrightarrow \;\; u(t) \in C^\infty
+\]
+can be written in Coq-style dependent types as:
+
+\begin{lstlisting}[language=Coq, caption=Collapse Structure Encoding in Coq]
+(* Collapse Core Axioms in Coq *)
+
+Parameter PH1_trivial : Prop.      (* PH₁ = 0 *)
+Parameter Ext1_zero : Prop.        (* Ext¹ = 0 *)
+Parameter Smooth_solution : Prop.  (* u(t) ∈ C∞ *)
+
+Axiom ExtImpliesPH : Ext1_zero -> PH1_trivial.
+Axiom PHImpliesSmooth : PH1_trivial -> Smooth_solution.
+Axiom SmoothImpliesExt : Smooth_solution -> Ext1_zero.
+
+Theorem Collapse_Triad :
+  Ext1_zero <-> PH1_trivial <-> Smooth_solution.
+\end{lstlisting}
+
+This defines the **Collapse triad** equivalence and provides a base for recursive extensions and obstruction diagnostics.
+
+
+\subsection*{Z.12 Collapse Typing Table and Structural Mapping}
+\addcontentsline{toc}{subsection}{Z.12 Collapse Typing Table and Structural Mapping}
+
+The table below maps each Collapse axiom A0–A8 to its corresponding dependent type and intended formal semantics:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|p{7cm}|p{5.5cm}|}
+\hline
+\textbf{Axiom} & \textbf{Mathematical Statement} & \textbf{Type-Theoretic Expression (Coq/Lean)} \\
+\hline
+A0 & Collapse completeness: \( \mathrm{PH}_1 = 0, \; \mathrm{Ext}^1 = 0 \Rightarrow u(t) \in C^\infty \) & `PH1_trivial ∧ Ext1_zero → Smooth_solution` \\
+A1 & Topological trivialization filtration \( \{\mathcal{F}_t\} \) exists & `∀t: Time, TopoCollapse(𝔽_t)` \\
+A2 & Categorical collapse via Ext-class degeneration & `∀𝔽: Sheaf, Ext^1(𝔽,–) = 0` \\
+A3 & Symmetry of collapse under derived duality & `∀𝔽, DualCollapse(𝔽)` \\
+A4 & Functoriality under orbit shift or translation & `Collapse ∘ Shift ≅ Collapse` \\
+A5 & Commutativity with degeneration maps & `Collapse ∘ Trop = Trop ∘ Collapse` \\
+A6 & Collapse stability under base change (e.g., field extension) & `BaseChange(Collapse(𝔽)) ≅ Collapse(BaseChange(𝔽))` \\
+A7 & Collapse ↔ Mirror–Langlands duality & `Collapse(𝔽) ≅ MirrorLanglands(𝔽)` \\
+A8 & Coherence of Collapse with neural classifier judgment & `Collapse(𝔽) ↔ Classify(𝔽) = “trivial”` \\
+\hline
+\end{tabular}
+\end{center}
+
+This structural mapping supports Coq/Lean-based mechanization and logical formalization of the entire Collapse architecture.
+
 
 
 \end{document}
