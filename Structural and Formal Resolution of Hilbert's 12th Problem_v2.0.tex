@@ -1,21 +1,54 @@
-% ==============================
-% large via Real-Function Collapse and Categorical Degeneration in AK-HDPST
-% ==============================
-\\documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{hyperref}
-\usepackage{mathrsfs}
-\usepackage{enumitem}
-\usepackage{tikz-cd}
-\usepackage{geometry}
-\geometry{a4paper, margin=2.5cm}
-\title{
-    \textbf{Structural and Formal Resolution of Hilbert's 12th Problem} \\
-    \vspace{0.5em}
-    \large via Real-Function Collapse and Categorical Degeneration in AK-HDPST v2.0
-}
-\author{Atsushi Kobayashi \& ChatGPT (OpenAI)}
+% ===========================
+% AK High-Dimensional Projection Structural Theory v8.1
+% ===========================
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,geometry,hyperref,mathrsfs}
+\geometry{margin=1in}
+
+% === Math Operators and Commands ===
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\PH}{PH}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Coker}{Coker}
+
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cH}{\mathcal{H}}
+
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Sha}{\mathbb{S}}
+
+% === Title and Metadata ===
+\title{Structural and Formal Resolution of Hilbert's 12th Problem\\
+\large via Real-Function Collapse and Categorical Degeneration in AK-HDPST v2.0}
+\author{A. Kobayashi \\ \small ChatGPT Research Partner}
 \date{June 2025}
+
+% === Theorem Environment ===
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 
 \begin{document}
 
