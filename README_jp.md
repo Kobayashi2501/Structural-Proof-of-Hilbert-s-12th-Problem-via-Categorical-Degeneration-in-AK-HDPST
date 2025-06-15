@@ -1,7 +1,7 @@
 # 🔷 ヒルベルト第12問題の構造的・形式的解法 (v2.0)
 
 📄 [English README (英語版はこちら)](README.md)  
-📦 ベース理論： [AK高次元射影構造理論 v8.1](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+📦 ベース理論： [AK高次元射影構造理論](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
 ---
 
