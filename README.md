@@ -1,7 +1,7 @@
 # 🔷 Structural and Formal Resolution of Hilbert's 12th Problem (v2.0)
 
 📄 [日本語版 README (Japanese README Available Here)](README_jp.md)  
-📦 Built on: [AK-HDPST v8.1](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+📦 Built on: [AK-HDPST](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
 ---
 
