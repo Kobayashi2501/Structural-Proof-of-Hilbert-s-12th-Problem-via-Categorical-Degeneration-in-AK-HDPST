@@ -111,7 +111,7 @@ Thus:
 
 ## 🌐 Japanese Version
 
-👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Collapse-Hilbert12/blob/main/README_ja.md)
+👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README_jp.md)
 
 ---
 
