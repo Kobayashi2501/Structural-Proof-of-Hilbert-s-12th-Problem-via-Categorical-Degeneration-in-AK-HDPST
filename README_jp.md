@@ -111,7 +111,7 @@ Collapse理論により：
 
 ## 🌐 English Version
 
-👉 [English Version (README.md)](https://github.com/Kobayashi2501/Structural-Collapse-Hilbert12/blob/main/README.md)
+👉 [English Version (README.md)](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README.md)
 
 ---
 
