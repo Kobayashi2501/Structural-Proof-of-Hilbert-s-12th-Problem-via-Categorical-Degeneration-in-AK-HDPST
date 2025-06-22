@@ -25,21 +25,22 @@ The classical formulation is extended to all CM, real, and general number fields
 
 ## 🧠 Collapse Proof Strategy
 
-We define the Collapse condition for a modular or automorphic sheaf \( \mathcal{F}_K \):
+We define the Collapse condition for a modular or automorphic sheaf Fₖ:
 
 ```math
-\mathrm{PH}_1(\mathcal{F}_K) = 0 \quad \land \quad \mathrm{Ext}^1(\mathcal{F}_K, \mathbb{Q}_\ell) = 0
-\quad \Rightarrow \quad
-x \in \mathrm{CollapseImage}(\mathcal{F}_K) \subset K^{\mathrm{ab}}
+PH₁(Fₖ) = 0  ∧  Ext¹(Fₖ, ℚₗ) = 0
+⇒
+x ∈ CollapseImage(Fₖ) ⊆ K^{ab}
 ```
 
 This condition applies across three transcendental classes:
 
-| Class | Function Type | Field Type |
-|-------|---------------|------------|
-| Type I | \( j(\tau), \wp(z) \) | Imaginary quadratic |
-| Type II | \( e^{2\pi i \alpha}, \Gamma(z) \) | \( \mathbb{Q} \), real fields |
-| Type III | \( \theta[\varepsilon](\tau, z), \mathcal{M}_g \) | CM fields of degree \( >2 \) |
+| Class     | Function Type                          | Field Type               |
+|-----------|----------------------------------------|--------------------------|
+| Type I    | j(τ), ℘(z)                             | Imaginary quadratic fields |
+| Type II   | exp(2πiα), Γ(z)                        | ℚ, Real fields           |
+| Type III  | θ[ε](τ, z), M_g(τ)                     | Higher CM fields         |
+
 
 ---
 
