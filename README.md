@@ -109,6 +109,14 @@ Thus:
 
 ---
 
+## DOI
+
+This project has been formally archived on Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15714154.svg)](https://doi.org/10.5281/zenodo.15714154)
+
+---
+
 ## 🌐 Japanese Version
 
 👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README_jp.md)
