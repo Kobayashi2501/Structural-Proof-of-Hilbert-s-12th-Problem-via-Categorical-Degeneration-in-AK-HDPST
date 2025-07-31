@@ -213,7 +213,7 @@ PH₁(𝔽ₖ) = 0 ∧ Ext¹(𝔽ₖ, ℚₗ) = 0
 
 Zenodoにてバージョン管理・公開されています：
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15714154.svg)](https://doi.org/10.5281/zenodo.15714154)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16628888.svg)](https://doi.org/10.5281/zenodo.16628888)
 
 ---
 
