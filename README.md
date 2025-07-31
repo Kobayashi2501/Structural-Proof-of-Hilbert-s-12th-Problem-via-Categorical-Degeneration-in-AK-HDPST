@@ -1,145 +1,151 @@
-# 📘 Structural and Formal Resolution of Hilbert's 12th Problem (v3.0)
+# 📘 Structural and Formal Resolution of Hilbert's 12th Problem (v4.0)
 
 ### A Collapse-Theoretic and Type-Theoretic Proof  
 #### via AK High-Dimensional Projection Structural Theory (AK-HDPST)
 
-This repository presents **Version 3.0** of a complete and formally structured resolution of the **Hilbert's 12th Problem**, based on:
+This repository presents **Version 4.0** of a formally structured and constructively resolved version of the **Hilbert's 12th Problem**, built upon:
 
-- **Collapse Theory** (PH₁/Ext¹ chain)  
-- **Type-theoretic realizability** (via Coq/Lean syntax)  
-- **AK High-Dimensional Projection Structural Framework**
+- **Collapse Theory** (PH₁/Ext¹ obstruction vanishing)  
+- **Type-theoretic realization** (Coq/Lean dependent predicates)  
+- **AK High-Dimensional Projection Structural Framework (AK-HDPST)**
 
 > 📄 Files:
-> - `Structural and Formal Resolution of Hilbert's 12th Problem_v3.0.tex` — LaTeX source  
-> - `Structural and Formal Resolution of Hilbert's 12th Problem_v3.0.pdf` — compiled full proof
+> - `Structural and Formal Resolution of Hilbert's 12th Problem_v4.0.tex` — LaTeX source  
+> - `Structural and Formal Resolution of Hilbert's 12th Problem_v4.0.pdf` — compiled formal proof  
 
 ---
 
 ## 🎯 Problem Statement
 
-> Construct **explicit transcendental generators** of the maximal abelian extension \( K^{\mathrm{ab}} \) of a number field \( K \), generalizing the Kronecker–Weber and CM theories.
+> Construct **explicit transcendental generators** of the maximal abelian extension \( K^{\mathrm{ab}} \) of a number field \( K \), generalizing Kronecker–Weber and CM theories.
 
-The classical formulation is extended to all CM, real, and general number fields via Collapse-theoretic classification.
+In AK-HDPST, the problem is reframed using collapse-admissibility predicates applied to modular or automorphic sheaves.
 
 ---
 
-## 🧠 Collapse Proof Strategy
+## 🧠 Collapse-Based Proof Strategy
 
-We define the Collapse condition for a modular or automorphic sheaf Fₖ:
+Let \( \mathcal{F}_K \) be a modular or automorphic sheaf over \( K \).  
+We define the **Collapse Condition**:
 
-```math
-PH₁(Fₖ) = 0  ∧  Ext¹(Fₖ, ℚₗ) = 0
-⇒
-x ∈ CollapseImage(Fₖ) ⊆ K^{ab}
-```
+PH₁(𝔽ₖ) = 0 ∧ Ext¹(𝔽ₖ, ℚₗ) = 0
+⟹
+x ∈ CollapseImage(𝔽ₖ) ⊆ Kᵃᵇ
 
-This condition applies across three transcendental classes:
 
-| Class     | Function Type                          | Field Type               |
-|-----------|----------------------------------------|--------------------------|
-| Type I    | j(τ), ℘(z)                             | Imaginary quadratic fields |
-| Type II   | exp(2πiα), Γ(z)                        | ℚ, Real fields           |
-| Type III  | θ[ε](τ, z), M_g(τ)                     | Higher CM fields         |
+This governs three transcendental function classes:
 
+| Collapse Type | Function Class             | Field Domain                |
+|---------------|----------------------------|-----------------------------|
+| Type I        | j(τ), ℘(z)                 | Imaginary Quadratic Fields |
+| Type II       | exp(2πiα), Γ(z)            | ℚ, Real Fields             |
+| Type III      | θ[ε](τ, z), M_g(τ)         | Higher CM Fields           |
 
 ---
 
 ## 🧩 Collapse Chain Summary
 
-```math
-\mathrm{PH}_1(\mathcal{F}_K) = 0
-\quad \Rightarrow \quad
-\mathrm{Ext}^1(\mathcal{F}_K, \mathbb{Q}_\ell) = 0
-\quad \Rightarrow \quad
-x \in K^{\mathrm{ab}}
-```
+PH₁(𝔽ₖ) = 0
+⟹ Ext¹(𝔽ₖ, ℚₗ) = 0
+⟹ x ∈ Kᵃᵇ
 
-Each arrow is governed by axioms (A0)–(A9) and type-theoretic classifiers (Π-collapse, Σ-generator).
+
+Each arrow is validated by:
+- Collapse Axioms A0–A9
+- Type-theoretic classifiers (Π-collapse, Σ-generator)
+- Constructive proof in Coq
 
 ---
 
 ## 📚 Proof Structure (Chapters 1–7)
 
-| Chapter | Title | Summary |
-|--------:|-------|---------|
-| 1 | Introduction | Definition, motivation, and Collapse strategy |
-| 2 | CM Collapse | \( j(\tau) \) structure and modular generation |
-| 3 | Circular Collapse | \( e^{2\pi i \alpha} \), \( \Gamma(z) \), and cyclotomic fields |
-| 4 | Abelian Collapse | Theta functions and higher CM fields |
-| 5 | Collapse Completion | Collapse Functor and typing system |
-| 6 | Langlands Compatibility | Galois correspondence via collapse |
-| 7 | Final Proof | Unified QED and Coq-formal transition |
+| Chapter | Title                 | Content Summary                                               |
+|--------:|-----------------------|---------------------------------------------------------------|
+| 1       | Introduction          | Collapse problem formulation and motivation                  |
+| 2       | CM Collapse           | j(τ) and classical CM resolution                             |
+| 3       | Circular Collapse     | Cyclotomic fields and exponential generation                |
+| 4       | Abelian Collapse      | Higher theta and modular stacks (Siegel/M_g)                |
+| 5       | Collapse Completion   | Collapse Functor, failure types, and predicate typing       |
+| 6       | Langlands Compatibility | Collapse ⇨ Galois ⇨ Automorphic transition                  |
+| 7       | Final Q.E.D.          | Formalized proof and collapse diagram closure               |
 
 ---
 
 ## 📑 Appendices (A–H)
 
-| Appendix | Title | Content |
-|---------:|-------|---------|
-| A | Modular CM Structures | Classical \( j \)-invariant and CM proof |
-| B | Circular Collapse | Cyclotomic exponentials and regulators |
-| C | Siegel Collapse | High-dimensional theta and moduli |
-| D | Collapse Functor | Axioms A0–A9 and typing classification |
-| E | Langlands | Galois and automorphic lift compatibility |
-| F | Supplementary QED | Matrix of all types and proof states |
-| G | Glossary + Gallery | Terms, diagrams, index of collapse logic |
-| H | Coq/Lean Formalization | Machine-verifiable QED encoding |
+| Appendix | Title                | Description                                                   |
+|---------:|----------------------|---------------------------------------------------------------|
+| A        | Modular CM Structures | Classical j-invariant and CM-type sheaves                    |
+| B        | Circular Collapse    | Kronecker–Weber, regulators, and Gamma-based collapse        |
+| C        | Siegel Collapse      | High-dimensional abelian θ-functions and M_g moduli          |
+| D        | Collapse Functor     | Collapse Axioms A0–A9, predicate definition, typing system   |
+| E        | Langlands Collapse   | Galois⇄Automorphic compatibility via Collapse                |
+| F        | Collapse Q.E.D. Grid | Collapse matrix, failure types, and classification diagrams  |
+| G        | Glossary + Gallery   | Collapse diagrams, symbol index, type table                 |
+| H        | Coq Formalization    | Machine-verifiable Collapse Completion in dependent logic    |
 
 ---
 
-## ✅ Completion Status
+## ✅ Collapse Q.E.D. Result
 
-The current version (v3.0) provides:
+∀𝔽ₖ: Sh(Mod_K),
+PH₁(𝔽ₖ) = 0 ∧ Ext¹(𝔽ₖ, ℚₗ) = 0
+⟹
+∃x ∈ CollapseImage(𝔽ₖ) ⊆ Kᵃᵇ
 
-- Structural proof under collapse functor conditions  
-- Full classification of generators via modular sheaves  
-- Coq-formalized QED under dependent type theory
 
-### ✅ Formal Result
+This formally resolves **Hilbert’s 12th Problem** for:
 
-```math
-\forall \mathcal{F}_K,\ 
-\mathrm{PH}_1 = 0 \ \wedge\ \mathrm{Ext}^1 = 0
-\ \Rightarrow\ \exists x \in \mathrm{CollapseImage}(\mathcal{F}_K) \subset K^{\mathrm{ab}}
-```
+- ℚ and Cyclotomic Fields (Type II)
+- Imaginary Quadratic Fields (Type I)
+- Higher CM Fields via Siegel Collapse (Type III)
 
-Thus:
-
-> **Hilbert's 12th Problem is resolved through collapse completion and type-theoretic generator realization.**
+🔸 For Real Quadratic and General Number Fields:
+- The theory classifies such cases as **Type IV Failures**
+- Spectral and Iwasawa tower completions offer **constructive recovery (Type IV★)**
 
 ---
 
-## DOI
+## 🔍 Collapse Typing Table
 
-This project has been formally archived on Zenodo:
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15714154.svg)](https://doi.org/10.5281/zenodo.15714154)
+| Field Type               | Collapse Typing | Resolution Status            |
+|--------------------------|------------------|-------------------------------|
+| ℚ, ℚ(ζₙ)                | Type II         | ✅ Fully Resolved            |
+| ℚ(√–d), CM Fields        | Type I / III    | ✅ Fully Resolved            |
+| ℚ(√d), Real Fields       | Type IV★        | 🟡 Recoverable by tower/spectral |
+| Totally Real Fields      | Type IV          | ❌ Collapse Failure           |
 
 ---
 
-## 🌐 Japanese Version
+## 🌐 Language Support
 
 👉 [日本語版はこちら（README_ja.md）](https://github.com/Kobayashi2501/Structural-Proof-of-Hilbert-s-12th-Problem-via-Categorical-Degeneration-in-AK-HDPST/blob/main/README_jp.md)
 
 ---
 
-## 🧠 Related Theory: AK-HDPST
+## 📘 Related Theory
 
-This work is grounded in:
+This work is part of the **AK High-Dimensional Projection Structural Theory**:
 
-**AK High-Dimensional Projection Structural Theory**  
-→ [AK-HDPST GitHub Repository](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+📂 [AK-HDPST Repository](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+
+---
+
+## 🔖 DOI & Archival
+
+This project is archived and versioned on Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15714154.svg)](https://doi.org/10.5281/zenodo.15714154)
 
 ---
 
 ## 📩 Contact
 
-For research inquiry, discussion, or collaboration:
-
 📧 [dollops2501@icloud.com](mailto:dollops2501@icloud.com)
 
 ---
 
-## 📘 License
+## 🧾 License
 
-[MIT License](https://opensource.org/licenses/MIT)
+MIT License  
+[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
