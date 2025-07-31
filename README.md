@@ -106,14 +106,95 @@ This formally resolves **Hilbert’s 12th Problem** for:
 
 ---
 
+---
+
 ## 🔍 Collapse Typing Table
 
-| Field Type               | Collapse Typing | Resolution Status            |
-|--------------------------|------------------|-------------------------------|
-| ℚ, ℚ(ζₙ)                | Type II         | ✅ Fully Resolved            |
-| ℚ(√–d), CM Fields        | Type I / III    | ✅ Fully Resolved            |
-| ℚ(√d), Real Fields       | Type IV★        | 🟡 Recoverable by tower/spectral |
-| Totally Real Fields      | Type IV          | ❌ Collapse Failure           |
+| Field Type             | Collapse Typing | Resolution Status               |
+|------------------------|------------------|----------------------------------|
+| ℚ, ℚ(ζₙ)              | Type II         | ✅ Fully Resolved                |
+| ℚ(√–d), CM Fields      | Type I / III    | ✅ Fully Resolved                |
+| ℚ(√d), Real Fields     | Type IV★        | 🟡 Recoverable by tower/spectral |
+| Totally Real Fields    | Type IV         | ❌ Collapse Failure              |
+
+---
+
+## 📘 Collapse Classification Summary (from Appendices A–H)
+
+| Target Field \( K \)              | Source Appendix | Collapse Typing         | Outcome                                          |
+|-----------------------------------|------------------|--------------------------|--------------------------------------------------|
+| \( \mathbb{Q} \)                  | Appendix B       | Type I–III               | ✅ Fully resolved (Kronecker–Weber)              |
+| \( \mathbb{Q}(\sqrt{-d}) \)       | Appendix A       | Type I–III               | ✅ Fully resolved (CM points, \( j(\tau) \))     |
+| General CM fields \( K \)         | Appendix C       | Type I–III               | ✅ Resolved via theta functions (Siegel domains) |
+| Real quadratic fields \( \mathbb{Q}(\sqrt{d}) \) | Appendix H       | Type IV → Type IV★       | ⚠️ Unresolved / potentially recoverable via towers |
+| Totally real non-CM fields        | Appendix H       | Type IV (Obstructed)     | ❌ Currently Collapse Failure (unresolved)       |
+
+---
+
+## 🧠 Reinterpreting Hilbert's 12th Problem via Collapse Theory
+
+**Classical formulation:**
+
+> For any number field \( K \), construct explicit transcendental generators of \( K^{\mathrm{ab}} \).
+
+**AK Collapse reformulation:**
+
+> For any sheaf \( \mathcal{F}_K \), determine whether it is **collapse-admissible** (Type I–III).  
+> If so, then:
+> \[
+> \mathcal{F}_K \mapsto x \in \mathrm{CollapseImage}(\mathcal{F}_K) \subset K^{\mathrm{ab}}
+> \]
+> via the **Collapse Functor**.
+
+Thus, solving Hilbert's 12th Problem constructively amounts to completing the **Collapse Chain** for each \( K \).
+
+---
+
+## ✳️ Key Contributions of AK Collapse Theory
+
+1. **Beyond Classical CM:**
+   - Extends resolution beyond imaginary quadratic fields to higher CM fields.
+   - Incorporates theta functions, Siegel domains, and abelian stacks.
+   - Realized explicitly in **Appendix C (Abelian Collapse)**.
+
+2. **Partial Failures Made Recoverable:**
+   - Real quadratic fields reclassified as **Type IV★** (recoverable failures).
+   - **Appendix H** and **Appendix L** propose tower/spectral methods for completion.
+
+3. **Structured Failure Classification:**
+   - Collapse failure types (Type IV) are no longer opaque.
+   - Classified by structural causes:
+     - **Categorical:** Ext¹ torsion classes
+     - **Topological:** Persistent homology obstructions
+     - **Analytical:** Divergent collapse energy
+     - **Geometric:** Spectral gap insufficiency
+
+---
+
+## ✅ Final Conclusion
+
+In **AK Collapse Theory v14.5**, the Hilbert 12th Problem is:
+
+- ✅ **Resolved constructively** for:
+  - Rational fields
+  - Imaginary quadratic fields
+  - Higher CM fields
+
+- ⚠️ **Unresolved but recoverable** for:
+  - Real quadratic fields (collapse admissibility achievable in the limit)
+
+- ❌ **Structurally obstructed** for:
+  - Totally real non-CM fields (classified as Collapse Failures)
+
+Thus, while a **fully affirmative global resolution** remains impossible due to inherent obstructions,  
+AK-HDPST provides the **first fully formal, type-theoretic framework** that:
+
+- Distinguishes where resolution is possible
+- Classifies structural failures
+- Provides constructive pathways for recovery
+- Encodes all logic in a Coq-verifiable form
+
+> 🧠 **Hilbert’s 12th Problem is no longer a binary question of "yes or no", but a structurally typed map of constructive reachability.**
 
 ---
 
