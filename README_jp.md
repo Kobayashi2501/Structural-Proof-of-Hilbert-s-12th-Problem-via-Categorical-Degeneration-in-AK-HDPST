@@ -106,14 +106,92 @@ PH₁(𝔽ₖ) = 0 ∧ Ext¹(𝔽ₖ, ℚₗ) = 0
 
 ---
 
-## 🔍 Collapse Typingによる分類
+---
 
-| 数体領域                    | Collapse分類型 | 解決状態                         |
-|-----------------------------|------------------|----------------------------------|
-| 有理数体, 円分体            | Type II         | ✅ 構成的解決（指数関数等）     |
-| 虚2次体, 一般CM体           | Type I / III    | ✅ 完全解決（j関数, θ関数）     |
-| 実2次体                     | Type IV★        | 🟡 Collapse Completion により可視化可能 |
-| 完全実数体・非CM体全般      | Type IV          | ❌ Collapse不可：構造的失敗     |
+## 🔍 Collapse Typing 分類表
+
+| 数体の種類                | Collapse Typing     | 解決状況                                 |
+|---------------------------|----------------------|-------------------------------------------|
+| 有理数体 ℚ, 円分体 ℚ(ζₙ) | Type II             | ✅ 完全解決（指数関数による生成）         |
+| 虚2次体 ℚ(√–d), CM体       | Type I / III        | ✅ 完全解決（j関数, θ関数）               |
+| 実2次体 ℚ(√d)             | Type IV★            | 🟡 Collapse Completion により回復可能     |
+| 完全実体（非CM体）        | Type IV             | ❌ Collapse Failure（構造的失敗）         |
+
+---
+
+## 📘 分類付きまとめ（Appendix A～Hの結果に基づく）
+
+| 対象体 \( K \)                       | 対応Appendix | Collapse Typing        | 結論                                                   |
+|-------------------------------------|---------------|--------------------------|----------------------------------------------------------|
+| \( \mathbb{Q} \)                    | Appendix B    | Type I–III               | ✅ 完全解決（Kronecker–Weberの指数関数）                |
+| \( \mathbb{Q}(\sqrt{-d}) \)         | Appendix A    | Type I–III               | ✅ 完全解決（CM点、\( j(\tau) \) による生成）           |
+| 一般CM体 \( K \)（高次元）           | Appendix C    | Type I–III               | ✅ Siegel–θ関数による構成的生成（Abelian Collapse）     |
+| 実2次体 \( \mathbb{Q}(\sqrt{d}) \)   | Appendix H    | Type IV → Type IV★       | ⚠️ 未解決だが塔やスペクトルによるCollapse Completionの可能性あり |
+| 完全実代数体・非CM体                 | Appendix H    | Type IV（Obstructed）    | ❌ 現時点ではCollapse Failureとして分類、未解決         |
+
+---
+
+## 🧠 Collapse理論における Hilbert第12問題の読み替え
+
+**古典的定式：**  
+> 任意の数体 \( K \) に対して、  
+> 最大アーベル拡大 \( K^{\mathrm{ab}} \) を明示的な超越関数の値によって生成せよ。
+
+**AK Collapse理論での変換：**  
+> 任意の保型層 \( \mathcal{F}_K \) に対し、Collapse-admissible（Type I〜III）かどうかを判定する。  
+> Collapse Functor により以下の写像が実現される：
+>
+> \[
+> \mathcal{F}_K \mapsto x \in \mathrm{CollapseImage}(\mathcal{F}_K) \subset K^{\mathrm{ab}}
+> \]
+
+このようにして、Hilbert第12問題の構成的解決は Collapse Completion の実現と一致します。
+
+---
+
+## ✳️ AK Collapse Theory による革新的な拡張
+
+1. **古典的CM体に留まらず、高次CM体へ拡張**
+   - theta関数やSiegel多様体上の構造を統合
+   - Appendix C にて Abelian Collapse として明示的に構成
+
+2. **部分的失敗（Type IV）も分類し回復可能に**
+   - 実2次体を Type IV → Type IV★（回復可能型）へ分類変更
+   - Appendix H, Appendix L で塔的極限やスペクトル減衰によりCollapse Completionを提示
+
+3. **Collapse Failure の分類と理由を構造的に明示**
+   - Ext¹のtorsion（カテゴリ的障害）
+   - Persistent Homology の非消滅（位相的障害）
+   - Collapse Energy の発散（解析的障害）
+   - スペクトルギャップの不足（幾何的障害）
+
+---
+
+## ✅ 結論（再掲）
+
+**AK Collapse Theory v14.5** において、Hilbert第12問題は：
+
+- ✅ **完全構成的に解決されている領域**：
+  - 有理数体（指数関数）
+  - 虚2次体（j関数）
+  - 高次CM体（theta関数、Siegel構造）
+
+- ⚠️ **未解決だが回復可能な領域**：
+  - 実2次体（Collapse Completion により可視化可能）
+
+- ❌ **構造的障害により未解決な領域**：
+  - 完全実体、非CM体（Type IV：回復不能な崩壊）
+
+---
+
+> 🧠 結語：
+>
+> Hilbert第12問題はもはや「Yes or No」の命題ではなく、  
+> Collapse Typing によって「どこまでが構成可能か／どこからが障害か」を示す  
+> **構造的かつ型理論的な地図**へと変換された。
+>
+> これは数論における「問いの解法」から「構造の証明」へのパラダイム転換であり、  
+> **AK理論はそれを完全な分類体系として提示した初の理論**です。
 
 ---
 
