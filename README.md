@@ -216,7 +216,7 @@ This work is part of the **AK High-Dimensional Projection Structural Theory**:
 
 This project is archived and versioned on Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15714154.svg)](https://doi.org/10.5281/zenodo.15714154)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16628888.svg)](https://doi.org/10.5281/zenodo.16628888)
 
 ---
 
